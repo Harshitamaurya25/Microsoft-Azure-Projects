@@ -1,18 +1,11 @@
 <!-- TOC -->
 * [Project instructions](#project-instructions)
   * [Task 1: Create your Azure resources](#task-1--create-your-azure-resources)
-      * [Task 1 Solution](#task-1-solution)
   * [Task 2: Design a star schema](#task-2--design-a-star-schema)
-      * [Task 2 Solution](#task-2-solution)
   * [Task 3: Create the data in PostgreSQL](#task-3--create-the-data-in-postgresql)
-      * [Task 3 Solution](#task-3-solution)
   * [Task 4: EXTRACT the data from PostgreSQL](#task-4--extract-the-data-from-postgresql)
-      * [Task 4 Solution](#task-4-solution)
 * [Task 5: LOAD the data into external tables in the data warehouse](#task-5--load-the-data-into-external-tables-in-the-data-warehouse)
-      * [Task 5 Solution](#task-5-solution)
 * [Task 6: TRANSFORM the data to the star schema using CETAS](#task-6--transform-the-data-to-the-star-schema-using-cetas)
-      * [Task 6 Solution](#task-6-solution)
-  * [Reference](#reference)
 <!-- TOC -->
 
 # Project instructions
@@ -27,13 +20,11 @@ To demonstrate the things you have learned in this course, you will perform the 
 
 > In the cloud lab Azure environment, you will only be able to use the built-in serverless SQL Pool.
 
-#### [Task 1 Solution](./solutions/Task1.md)
 
 ## Task 2: Design a star schema
 
 You are being provided a relational schema that describes the data as it exists in PostgreSQL. In addition, you have been given a set of business requirements related to the data warehouse. You are being asked to design a star schema using fact and dimension tables.
 
-#### [Task 2 Solution](./solutions/Task2.md)
 
 ## Task 3: Create the data in PostgreSQL
 
@@ -46,13 +37,10 @@ To prepare your environment for this project, you first must create the data in 
 
 You can verify this data exists by using pgAdmin or a similar PostgreSQL data tool.
 
-#### [Task 3 Solution](./solutions/Task3.md)
-
 ## Task 4: EXTRACT the data from PostgreSQL
 
 In your Azure Synapse workspace, you will use the ingest wizard to create a one-time pipeline that ingests the data from PostgreSQL into Azure Blob Storage. This will result in all four tables being represented as text files in Blob Storage, ready for loading into the data warehouse.
 
-#### [Task 4 Solution](./solutions/Task4.md)
 
 # Task 5: LOAD the data into external tables in the data warehouse
 
@@ -63,7 +51,6 @@ Helpful Hints
 - When using the external table wizard, you may need to modify the script to put dates into a varchar field in staging rather than using the datetime data type. You can convert them during the transform step. 
 - When using the external table wizard, if you rename the columns in your script, it will help you when writing transform scripts. By default, they are named [C1], [C2], etc. which are not useful column names in staging.
 
-#### [Task 5 Solution](./solutions/Task5.md)
 
 # Task 6: TRANSFORM the data to the star schema using CETAS
 
@@ -142,7 +129,6 @@ You can also explore the Linked data source to verify the results.
 
 <img src="assets/img5.png" alt="Verifying the result in the Data Lake storage." width="700"/>
 
-#### [Task 6 Solution](./solutions/Task6.md)
 
 ## Reference
 - [CETAS in serverless SQL pool](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-cetas#cetas-in-serverless-sql-pool)
